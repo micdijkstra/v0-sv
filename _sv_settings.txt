@@ -1,0 +1,4 @@
+title: Website
+theme: html
+domain: website.smvi.co
+description: This is your site description which can be edited in the _sv_settings.txt file, another Small Victory.

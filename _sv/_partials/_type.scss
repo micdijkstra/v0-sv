@@ -1,0 +1,592 @@
+/*doc
+---
+title: Size
+name: 0-t-sizes
+category: Type
+---
+
+```html_example
+<div class="t-xxs">Extra Extra Small</div>
+```
+
+```html_example
+<div class="t-xs">Extra Small</div>
+```
+
+```html_example
+<div class="t-sm">Small</div>
+```
+
+```html_example
+<div class="t-md">Medium</div>
+```
+
+```html_example
+<div class="t-lg">Large</div>
+```
+
+```html_example
+<div class="t-xl">Extra Large</div>
+```
+
+```html_example
+<div class="t-xxl">Extra Extra Large</div>
+```
+*/
+
+/*doc
+---
+title: Base
+name: 2-type-base
+category: Type
+---
+```html_example
+  <div class="t-default">Default Type</div>
+```
+
+```html_example
+  <div class="t-italic">Italic Type</div>
+```
+
+```html_example
+  <div class="t-bold">Bold Type</div>
+```
+
+```html_example
+  <div class="t-bold-italic">Bold Italic Type</div>
+```
+*/
+
+@mixin t-default {
+  font-family: 'HelveticaNeue', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-default {
+  @include t-default;
+}
+
+@mixin t-italic {
+  font-family: 'HelveticaNeue-Italic', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-italic {
+  @include t-italic;
+}
+
+@mixin t-bold {
+  font-family: 'HelveticaNeue-Bold', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-bold {
+  @include t-bold;
+}
+
+@mixin t-bold-italic {
+  font-family: 'HelveticaNeue-BoldItalic', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-bold-italic {
+  @include t-bold-italic;
+}
+
+/*doc
+---
+title: Title
+name: 2-type-title
+category: Type
+---
+```html_example
+<div class="t-title">Title Type</div>
+```
+
+```html_example
+<div class="t-title-bold">Bold Title Type</div>
+```
+*/
+
+@mixin t-title {
+  font-family: 'HelveticaNeue-Light', Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-title {
+  @include t-title;
+}
+
+@mixin t-title-bold {
+  @include t-bold;
+}
+
+.t-title-bold {
+  @include t-title-bold;
+}
+
+/*doc
+---
+title: Alt
+name: 3-type-alt
+category: Type
+---
+```html_example
+<div class="t-alt">Alt Type</div>
+```
+*/
+
+@mixin t-alt {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.t-alt {
+  @include t-alt;
+}
+
+
+/*doc
+---
+title: Mono
+name: 5-type-mono
+category: Type
+---
+```html_example
+<div class="t-mono">Mono Type</div>
+```
+*/
+
+@mixin t-mono {
+  font-family: "Menlo", "PTMono-Regular", Helvetica, Helmut, Arial, "Lucida Grande", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin t-label {
+  @include t-mono;
+}
+
+.t-mono {
+  @include t-mono;
+}
+
+.t-label {
+  @include t-mono;
+}
+
+/*doc
+---
+title: Copy
+name: 6-type-copy
+category: Type
+---
+```html_example
+<div class="t-copy">Copy type</div>
+```
+
+```html_example
+<div class="t-copy-italic">Italic Copy Type</div>
+```
+
+```html_example
+<div class="t-copy-bold">Bold Copy Type</div>
+```
+*/
+
+@mixin t-copy {
+  font-family: 'Marion-Regular', Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-copy {
+  @include t-copy;
+}
+
+@mixin t-copy-italic {
+  font-family: 'Marion-Italic', Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-copy-italic {
+  @include t-copy-italic;
+}
+
+@mixin t-copy-bold {
+  font-family: 'Marion-Bold', Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-copy-bold {
+  @include t-copy-bold;
+}
+
+/*doc
+---
+title: Body
+name: 7-body-type
+category: Type
+---
+```html_example
+<div>
+  Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing <b>elit</b>, sed do eiusmod tempor <em>incididunt</em> ut <i>labore</i> et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id <a href="#">est laborum</a>.
+</div>
+```
+*/
+
+body {
+  @include t-default;
+  color: $color-base;
+  font-size: $text-xxs;
+
+  em {
+    @include t-italic;
+  }
+
+  b, strong {
+    @include t-bold;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  font-weight: normal;
+  letter-spacing: $letter-sm;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:visited,
+  &:hover {
+    outline: 0;
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/*doc
+---
+title: Typeset
+name: 8-typeset
+category: Type
+---
+
+Reading text that has been set.
+
+```html_example
+<div class="t-set">
+  <h1>Heading One</h1>
+
+  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h2>Heading Two</h2>
+
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h3>Heading Three</h3>
+
+  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h4>Heading Four</h4>
+
+  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h5>Heading Five</h5>
+
+  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h6>Heading Six</h6>
+
+  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ul>
+
+  <hr>
+
+  <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ol>
+</div>
+```
+*/
+h1 {
+  .t-set &,
+  &.t-set {
+    @include t-title-bold;
+    font-size: $text-xl;
+    line-height: $line-sm;
+
+    @include sm {
+      font-size: $text-xxl;
+    }
+  }
+}
+
+h2 {
+  .t-set &,
+  &.t-set {
+    @include t-title-bold;
+    font-size: $text-lg;
+    line-height: $line-sm;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  .t-set &,
+  &.t-set {
+    @include t-title-bold;
+    font-size: $text-md;
+    line-height: $line-sm;
+
+    .t-mono,
+    &.t-mono {
+      font-size: $text-xxs;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+p,
+li {
+  .t-set &,
+  &.t-set {
+    @include t-title;
+    font-size: $text-sm;
+    line-height: $line-md;
+
+    .t-mono,
+    &.t-mono {
+      font-size: $text-xs;
+    }
+  }
+}
+
+small {
+  font-size: $text-xxs;
+}
+
+ol,
+ul {
+  .t-set &,
+  &.t-set {
+    padding-left: $space-md;
+  }
+}
+
+ol {
+  .t-set &,
+  &.t-set {
+    list-style: decimal;
+  }
+}
+
+ul {
+  .t-set &,
+  &.t-set {
+    list-style: disc;
+  }
+}
+
+a {
+  .t-set &,
+  &.t-set {
+    text-decoration: underline;
+  }
+}
+
+hr {
+  background-color: transparent;
+  border-color: $color-base;
+  border-width: $border-md;
+
+  &.t-set {
+    margin: $space-md 0;
+  }
+}
+
+
+img {
+  .t-set &,
+  &.t-set {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: $space-md;
+    width: 100%;
+  }
+}
+
+.t-set {
+  h1,
+  h2 {
+    margin-bottom: $space-md;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: $space-sm;
+  }
+
+  p,
+  ul,
+  ol {
+    margin-bottom: $space-sm;
+  }
+
+  * {
+    &.t-xxs {
+      font-size: $text-xxs;
+    }
+
+    &.t-xs {
+      font-size: $text-xs;
+    }
+
+    &.t-sm {
+      font-size: $text-sm;
+    }
+
+    &.t-md {
+      font-size: $text-md;
+    }
+
+    &.t-lg {
+      font-size: $text-lg;
+    }
+
+    &.t-xl {
+      font-size: $text-xl;
+    }
+
+    &.t-xxl {
+      font-size: $text-xxl;
+    }
+
+    &.t-bold {
+      @include t-bold;
+    }
+
+    &.t-alt {
+      @include t-alt;
+    }
+
+    &.t-title {
+      @include t-title;
+    }
+
+    &.t-mono {
+      @include t-mono;
+    }
+  }
+}
+
+/*
+```html_example
+<div class="t-set t-reading">
+  <h1>Heading One</h1>
+
+  <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h2>Heading Two</h2>
+
+  <p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing elit</strong>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h3>Heading Three</h3>
+
+  <p>Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h4>Heading Four</h4>
+
+  <p>Lorem ipsum dolor sit amet, <em>consectetur adipiscing elit</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h5>Heading Five</h5>
+
+  <p>Lorem ipsum dolor sit amet, <i>consectetur adipiscing elit</i>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <h6>Heading Six</h6>
+
+  <p>Lorem ipsum dolor sit amet, ,<small>consectetur adipiscing elit</small>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+  <ul>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ul>
+
+  <hr>
+
+  <ol>
+    <li>Lorem ipsum dolor sit amet</li>
+    <li>Consectetur adipiscing elit</li>
+    <li>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+  </ol>
+</div>
+```
+*/
+
+.t-reading {
+  h1 {
+    margin-bottom: $space-lg;
+  }
+
+  h2 {
+    margin-top: $space-lg;
+  }
+
+  h3 {
+    margin-top: $space-lg;
+  }
+
+  h4 {
+    margin-top: $space-md;
+  }
+
+  h5 {
+    margin-top: $space-md;
+  }
+
+  h6 {
+    margin-top: $space-md;
+  }
+}

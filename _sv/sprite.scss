@@ -1,0 +1,30 @@
+/* glue: 0.11.1 hash: c6186a5af0 */
+        .sprite-icon-check {
+            background-image: url('../images/sprite.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-icon-check {
+            background-position: 0 0;
+            width: 16px;
+            height: 12px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-icon-check {
+                background-image: url('../images/sprite.png');
+                -webkit-background-size: 16px 12px;
+                -moz-background-size: 16px 12px;
+                background-size: 16px 12px;
+            }
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 2.0), screen and (min--moz-device-pixel-ratio: 2.0), screen and (-o-min-device-pixel-ratio: 200/100), screen and (min-device-pixel-ratio: 2.0), screen and (min-resolution: 2.0dppx) {
+            .sprite-icon-check {
+                background-image: url('../images/sprite@2x.png');
+                -webkit-background-size: 16px 12px;
+                -moz-background-size: 16px 12px;
+                background-size: 16px 12px;
+            }
+        }
+        

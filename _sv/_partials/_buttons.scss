@@ -1,0 +1,35 @@
+/*doc
+---
+title: Button
+name: 0-buttons-overview
+category: Buttons
+---
+
+Extended from Bootstrap Buttons.
+
+```html_example
+<a href="#" class="btn">Button</a>
+```
+*/
+
+.btn {
+  border-radius: 0;
+  width: auto;
+
+  &:disabled,
+  &:focus,
+  &:active,
+  &.active,
+  &:hover {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+.btn-wide {
+  width: 300px;
+
+  @include md {
+    width: 450px;
+  }
+}
